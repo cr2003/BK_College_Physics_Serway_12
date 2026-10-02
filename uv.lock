@@ -326,33 +326,6 @@ wheels = [
 ]
 
 [[package]]
-name = "bk-physics-4-se-serway-11"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "astropy" },
-    { name = "ipykernel" },
-    { name = "matplotlib" },
-    { name = "matplotlib-inline" },
-    { name = "numpy" },
-    { name = "setuptools" },
-    { name = "sympy" },
-    { name = "vpython" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "astropy", specifier = ">=8.0.1" },
-    { name = "ipykernel", specifier = ">=7.3.0" },
-    { name = "matplotlib", specifier = ">=3.11.1" },
-    { name = "matplotlib-inline", specifier = ">=0.2.2" },
-    { name = "numpy", specifier = ">=2.5.1" },
-    { name = "setuptools", specifier = "<70" },
-    { name = "sympy", specifier = ">=1.14.0" },
-    { name = "vpython", specifier = ">=7.6.5" },
-]
-
-[[package]]
 name = "bleach"
 version = "6.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -552,6 +525,33 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/80/3f/bd97d3d9c613013d07cb7733d299385b41df37f0471310f5a73dc359f0b8/charset_normalizer-3.4.9-cp314-cp314t-win_amd64.whl", hash = "sha256:9b8e0f3107e2200b76f6054de99016eac3ee6762713587b36baaa7e4bd2ae177", size = 167620, upload-time = "2026-07-07T14:34:33.438Z" },
     { url = "https://files.pythonhosted.org/packages/3d/c6/eee9dca4439b1061f76373f06ea855678cc4a64c1c3c90b50e479edbb8eb/charset_normalizer-3.4.9-cp314-cp314t-win_arm64.whl", hash = "sha256:19ac87f93086ce37b86e098888555c4b4bc48102279bae3350098c0ed664b501", size = 158037, upload-time = "2026-07-07T14:34:35.018Z" },
     { url = "https://files.pythonhosted.org/packages/98/2b/f97f1c193fb855c345d678f5077d6926034db0722df74c8f057020e05a25/charset_normalizer-3.4.9-py3-none-any.whl", hash = "sha256:68e5f26a1ad57ded6d1cfb85331d1c1a195314756471d97758c48498bb4dcdf5", size = 64538, upload-time = "2026-07-07T14:34:56.993Z" },
+]
+
+[[package]]
+name = "college-physics-serway-12"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "astropy" },
+    { name = "ipykernel" },
+    { name = "matplotlib" },
+    { name = "matplotlib-inline" },
+    { name = "numpy" },
+    { name = "setuptools" },
+    { name = "sympy" },
+    { name = "vpython" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "astropy", specifier = ">=8.0.1" },
+    { name = "ipykernel", specifier = ">=7.3.0" },
+    { name = "matplotlib", specifier = ">=3.11.1" },
+    { name = "matplotlib-inline", specifier = ">=0.2.2" },
+    { name = "numpy", specifier = ">=2.5.1" },
+    { name = "setuptools", specifier = "<70" },
+    { name = "sympy", specifier = ">=1.14.0" },
+    { name = "vpython", specifier = ">=7.6.5" },
 ]
 
 [[package]]
@@ -1915,7 +1915,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "platform_python_implementation != 'PyPy' or sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
